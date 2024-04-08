@@ -25,3 +25,13 @@
 4. Move the copied files into `ContentWarningUnityTemplate/Assets/Plugins`
 5. Open the project with Unity 2022.3.15f1c1 `Whatever`
 6. You can now use game scripts inside of this unity project, for creating custom assets! `Just Item Script`
+
+### Script
+If the scripts doesn't have what you need
+
+1. Use [dnSpy](https://github.com/dnSpy/dnSpy, "dnSpy") To Export Scripts
+2. Copy scripts what you need
+3. Paste scripts into `ContentWarningUnityTemplate/Assets/Scripts/Assembly-CSharp`
+4. Keep only Field
+5. Delete fields as needed
+6. You can now use the new script
