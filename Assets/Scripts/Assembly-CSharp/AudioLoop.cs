@@ -3,48 +3,36 @@ using UnityEngine;
 using UnityEngine.Audio;
 using Zorro.Core;
 
-// Token: 0x02000013 RID: 19
+// Token: 0x0200002E RID: 46
 public class AudioLoop : MonoBehaviour
 {
-	// Token: 0x04000040 RID: 64
+	// Token: 0x0400007A RID: 122
 	public AudioClip clip;
 
-	// Token: 0x04000041 RID: 65
+	// Token: 0x0400007B RID: 123
 	public AudioMixerGroup mixerGroup;
 
-	// Token: 0x04000042 RID: 66
+	// Token: 0x0400007C RID: 124
 	public float volume = 1f;
 
-	// Token: 0x04000043 RID: 67
+	// Token: 0x0400007D RID: 125
 	public float pitch = 1f;
 
-	// Token: 0x04000044 RID: 68
+	// Token: 0x0400007E RID: 126
 	public float minDistance = 1f;
 
-	// Token: 0x04000045 RID: 69
+	// Token: 0x0400007F RID: 127
 	public float maxDistance = 100f;
 
-	// Token: 0x04000046 RID: 70
-	public bool spatialized = true;
+	// Token: 0x04000080 RID: 128
+	public float obstrability = 0.8f;
 
-	// Token: 0x04000047 RID: 71
-	public bool occulusion = true;
-
-	// Token: 0x04000048 RID: 72
-	public bool reflections = true;
-
-	// Token: 0x04000049 RID: 73
-	public bool transmission;
-
-	// Token: 0x0400004A RID: 74
-	public bool overrideBlend;
-
-	// Token: 0x0400004B RID: 75
+	// Token: 0x04000081 RID: 129
 	public float blend = 1f;
 
-	// Token: 0x0400004C RID: 76
+	// Token: 0x04000082 RID: 130
 	private Optionable<float> overrideStartTime = Optionable<float>.None;
 
-	// Token: 0x0400004D RID: 77
+	// Token: 0x04000083 RID: 131
 	private int checkID;
 }

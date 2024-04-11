@@ -1,34 +1,33 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
-// Token: 0x020002F5 RID: 757
+// Token: 0x0200027D RID: 637
 [Serializable]
 public class Emote
 {
-	// Token: 0x04000E34 RID: 3636
+	// Token: 0x04000A59 RID: 2649
 	public string displayName;
 
-	// Token: 0x04000E35 RID: 3637
+	// Token: 0x04000A5A RID: 2650
 	public string animationName;
 
-	// Token: 0x04000E36 RID: 3638
-	public bool unequip;
+	// Token: 0x04000A5B RID: 2651
+	public bool unequip = true;
 
-	// Token: 0x04000E37 RID: 3639
-	public float emoteLength;
+	// Token: 0x04000A5C RID: 2652
+	public float emoteLength = 2f;
 
-	// Token: 0x04000E38 RID: 3640
-	public float emoteMovementSpeed;
+	// Token: 0x04000A5D RID: 2653
+	public float emoteMovementSpeed = 0.1f;
 
-	// Token: 0x04000E39 RID: 3641
-	public bool emoteAllowRotate;
+	// Token: 0x04000A5E RID: 2654
+	public bool emoteAllowRotate = true;
 
-	// Token: 0x04000E3A RID: 3642
+	// Token: 0x04000A5F RID: 2655
 	public float emoteBaseScore;
 
-	// Token: 0x04000E3B RID: 3643
-	public float emoteScoreMultiplier;
+	// Token: 0x04000A60 RID: 2656
+	public float emoteScoreMultiplier = 1.5f;
 
-	// Token: 0x04000E3C RID: 3644
+	// Token: 0x04000A61 RID: 2657
 	public string[] comments;
 }

@@ -2,132 +2,105 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Zorro.Core.CLI;
 
-// Token: 0x020001EA RID: 490
+// Token: 0x0200020F RID: 527
 [CreateAssetMenu(fileName = "Item", menuName = "W/Item", order = -1)]
 public class Item : ScriptableObject
 {
-	public float ToolRarity { get; }
-	public Guid PersistentID { get; set; }
-
-	// Token: 0x04000771 RID: 1905
+	// Token: 0x040007EA RID: 2026
 	[FormerlySerializedAs("shopName")]
 	public string displayName;
 
-	// Token: 0x04000772 RID: 1906
+	// Token: 0x040007EB RID: 2027
 	public Sprite icon;
 
-	// Token: 0x04000773 RID: 1907
+	// Token: 0x040007EC RID: 2028
 	public GameObject itemObject;
 
-	// Token: 0x04000774 RID: 1908
+	// Token: 0x040007ED RID: 2029
 	public Item.ItemType itemType = Item.ItemType.Tool;
 
-	// Token: 0x04000775 RID: 1909
+	// Token: 0x040007EE RID: 2030
 	[FormerlySerializedAs("toolBudget")]
 	public int toolBudgetCost = 1;
 
-	// Token: 0x04000776 RID: 1910
+	// Token: 0x040007EF RID: 2031
 	public bool spawnable;
 
-	// Token: 0x04000777 RID: 1911
-	public Item.RARITY toolSpawnRarity = Item.RARITY.common;
+	// Token: 0x040007F0 RID: 2032
+	public RARITY toolSpawnRarity = RARITY.common;
 
-	// Token: 0x04000778 RID: 1912
+	// Token: 0x040007F1 RID: 2033
 	public int budgetCost;
 
-	// Token: 0x04000779 RID: 1913
+	// Token: 0x040007F2 RID: 2034
 	public float rarity = 1f;
 
-	// Token: 0x0400077A RID: 1914
+	// Token: 0x040007F3 RID: 2035
 	public PropContent content;
 
-	// Token: 0x0400077B RID: 1915
+	// Token: 0x040007F4 RID: 2036
 	public float groundSizeMultiplier = 1f;
 
-	// Token: 0x0400077C RID: 1916
+	// Token: 0x040007F5 RID: 2037
 	public float groundMassMultiplier = 1f;
 
-	// Token: 0x0400077D RID: 1917
+	// Token: 0x040007F6 RID: 2038
 	public float mass = 3f;
 
-	// Token: 0x0400077E RID: 1918
+	// Token: 0x040007F7 RID: 2039
 	public Vector3 holdPos;
 
-	// Token: 0x0400077F RID: 1919
+	// Token: 0x040007F8 RID: 2040
 	public bool useAlternativeHoldingPos;
 
-	// Token: 0x04000780 RID: 1920
+	// Token: 0x040007F9 RID: 2041
 	public Vector3 alternativeHoldPos;
 
-	// Token: 0x04000781 RID: 1921
+	// Token: 0x040007FA RID: 2042
 	public Vector3 holdRotation;
 
-	// Token: 0x04000782 RID: 1922
+	// Token: 0x040007FB RID: 2043
 	public bool useAlternativeHoldingRot;
 
-	// Token: 0x04000783 RID: 1923
+	// Token: 0x040007FC RID: 2044
 	public Vector3 alternativeHoldRot;
 
-	// Token: 0x04000784 RID: 1924
+	// Token: 0x040007FD RID: 2045
 	public byte id;
 
-	// Token: 0x04000785 RID: 1925
+	// Token: 0x040007FE RID: 2046
 	public string persistentID;
 
-	// Token: 0x04000786 RID: 1926
+	// Token: 0x040007FF RID: 2047
 	public bool purchasable;
 
-	// Token: 0x04000787 RID: 1927
+	// Token: 0x04000800 RID: 2048
 	public ShopItemCategory Category;
 
-	// Token: 0x04000788 RID: 1928
+	// Token: 0x04000801 RID: 2049
 	public int price;
 
-	// Token: 0x04000789 RID: 1929
+	// Token: 0x04000802 RID: 2050
 	public int quantity;
 
-	// Token: 0x0400078A RID: 1930
+	// Token: 0x04000803 RID: 2051
 	public Emote emoteInfo;
 
-	// Token: 0x0400078B RID: 1931
+	// Token: 0x04000804 RID: 2052
 	public List<ItemKeyTooltip> Tooltips = new List<ItemKeyTooltip>();
 
-	// Token: 0x0200037B RID: 891
+	// Token: 0x020003B6 RID: 950
 	public enum ItemType
 	{
-		// Token: 0x04000FE8 RID: 4072
+		// Token: 0x04001123 RID: 4387
 		Camera,
-		// Token: 0x04000FE9 RID: 4073
+		// Token: 0x04001124 RID: 4388
 		Tool,
-		// Token: 0x04000FEA RID: 4074
+		// Token: 0x04001125 RID: 4389
 		Artifact,
-		// Token: 0x04000FEB RID: 4075
+		// Token: 0x04001126 RID: 4390
 		Disc
-	}
-
-	// Token: 0x0200037C RID: 892
-	public enum RARITY
-	{
-		// Token: 0x04000FED RID: 4077
-		always = 10,
-		// Token: 0x04000FEE RID: 4078
-		superCommon = 50,
-		// Token: 0x04000FEF RID: 4079
-		moreCommon = 75,
-		// Token: 0x04000FF0 RID: 4080
-		common = 100,
-		// Token: 0x04000FF1 RID: 4081
-		lessCommon = 150,
-		// Token: 0x04000FF2 RID: 4082
-		uncommon = 1000,
-		// Token: 0x04000FF3 RID: 4083
-		rare = 10000,
-		// Token: 0x04000FF4 RID: 4084
-		epic = 100000,
-		// Token: 0x04000FF5 RID: 4085
-		legendary = 1000000,
-		// Token: 0x04000FF6 RID: 4086
-		mythic = 10000000
 	}
 }

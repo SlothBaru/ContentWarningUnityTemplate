@@ -5,18 +5,10 @@ using System.Runtime.CompilerServices;
 [Serializable]
 public class ItemKeyTooltip : IHaveUIData
 {
-	// Token: 0x0600052D RID: 1325 RVA: 0x00002050 File Offset: 0x00000250
-	[MethodImpl(MethodImplOptions.NoInlining)]
-	public ItemKeyTooltip(string key)
-	{
-		throw null;
-	}
-
-	// Token: 0x0600052E RID: 1326 RVA: 0x00002050 File Offset: 0x00000250
-	[MethodImpl(MethodImplOptions.NoInlining)]
+	// Token: 0x060005BB RID: 1467 RVA: 0x0001440A File Offset: 0x0001260A
 	public string GetString()
 	{
-		throw null;
+		return this.m_key;
 	}
 
 	// Token: 0x04000327 RID: 807
