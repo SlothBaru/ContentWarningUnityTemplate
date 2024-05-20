@@ -1,0 +1,17 @@
+Newtonsoft.Json.dll
+Photon3Unity3D.dll
+PhotonRealtime.dll
+PhotonUnityNetworking.dll
+PhotonUnityNetworking.Utilities.dll
+Sirenix.OdinInspector.Attributes.dll
+Sirenix.Serialization.Config.dll
+Sirenix.Serialization.dll
+Sirenix.Utilities.dll
+Unity.Burst.Unsafe.dll
+Unity.Collections.dll
+Unity.Collections.LowLevel.ILSupport.dll
+Zorro.Core.Runtime.dll
+Zorro.PhotonUtility.dll
+Zorro.Recorder.dll
+Zorro.Settings.Runtime.dll
+Zorro.UI.Runtime.dll
